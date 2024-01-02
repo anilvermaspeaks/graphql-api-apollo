@@ -7,9 +7,10 @@ export const typeDefs = `#graphql
     postCreate(post: PostInput!): PostPayload!
     postUpdate(postId: ID!, post: PostInput!): PostPayload!
     postDelete(postId: ID!): PostPayload!
+    userCreate(email: String!, name: String!, bio: String!, password: String!): AuthPayload
   }
 
-  
+
 
 
   type Post {
@@ -40,13 +41,18 @@ export const typeDefs = `#graphql
   }
 
   type PostPayload{
-    userErrors: [UserError!]
+    userErrors: [UserError!]!
     post: Post
   }
 
   input PostInput {
     title: String
     content: String
+  }
+
+  type AuthPayload{
+    userErrors: [UserError!]!,
+    user: User
   }
 
 `;

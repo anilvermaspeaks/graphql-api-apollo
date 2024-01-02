@@ -27,7 +27,12 @@
   "dependencies": {
     "@apollo/server": "^4.9.5",
     "@prisma/client": "^5.7.1",
-    "graphql": "^16.8.1"
+    "@types/bcryptjs": "^2.4.6",
+    "@types/validator": "^13.11.7",
+    "bcryptjs": "^2.4.3",
+    "graphql": "^16.8.1",
+    "http-status-codes": "^2.3.0",
+    "validator": "^13.11.0"
   },
   "type": "module"
 }

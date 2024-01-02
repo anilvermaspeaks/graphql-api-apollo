@@ -6,7 +6,9 @@ import { PrismaClient, Prisma } from "@prisma/client";
 import { typeDefs} from  './schema';
 import { Query, Mutation} from './resolvers';
 
-const prisma = new PrismaClient()
+const prisma = new PrismaClient({
+    errorFormat: 'pretty',
+  })
 
 export interface Context {
     prisma: PrismaClient<Prisma.PrismaClientOptions, never>

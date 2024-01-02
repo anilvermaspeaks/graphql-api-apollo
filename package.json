@@ -20,11 +20,13 @@
   "homepage": "https://github.com/anilvermaspeaks/graphql-api-apollo#readme",
   "devDependencies": {
     "@types/node": "^20.10.6",
+    "prisma": "^5.7.1",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.3.3"
   },
   "dependencies": {
     "@apollo/server": "^4.9.5",
+    "@prisma/client": "^5.7.1",
     "graphql": "^16.8.1"
   },
   "type": "module"

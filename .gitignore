@@ -1,5 +1,6 @@
 # Ignore the compiled output.
 dist/
+secrets.ts
 
 # TypeScript incremental compilation cache
 *.tsbuildinfo

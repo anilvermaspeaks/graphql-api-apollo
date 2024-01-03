@@ -110,6 +110,14 @@ export const postMutations = {
                 post: null
                     } 
         }
+        const userId = userInfo?.userId;
+        const error = await canUserMutatePost({userId, postId, prisma})
+        if(error){
+            return {
+                userErrors :error?.userErrors,
+           post: null 
+            }
+        }
         const post = await prisma.post.findUnique({where:{id:Number(postId)}})
         if(!post){
             return {
